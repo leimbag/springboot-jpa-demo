@@ -1,0 +1,43 @@
+spring:
+  # 配置数据库连接池及数据库驱动
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    # 配置mysql的链接信息
+    username: root
+    password: egcc123456
+    url: jdbc:mysql://localhost:3306/jpa_demo?useUnicode=true&characterEncoding=utf-8
+    # druid 配置
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select ‘x‘
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  # JPA
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+    # 是否自动生成dd
+    generate-ddl: true
+    # 生成方式 update 运行时在数据库生成表，若有更新则去更新数据
+    hibernate:
+      ddl-auto: update
+    # 格式化sql语句, 解决 hibernate multiple merge 问题
+    # 控制台展示 JPA 框架生成的sql语句
+    show-sql: true
+    properties:
+      hibernate:
+        # ddl 创建表使用innodb引擎
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+
+
+
