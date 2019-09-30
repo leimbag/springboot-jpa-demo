@@ -19,7 +19,7 @@ spring:
       minEvictableIdleTimeMillis: 300000
       validationQuery: select ‘x‘
       testWhileIdle: true
-      testOnBorrow: false
+      testOnBorrow: true
       testOnReturn: false
       # 打开PSCache，并且指定每个连接上PSCache的大小
       poolPreparedStatements: true
