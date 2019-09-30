@@ -53,6 +53,7 @@ public class JpaConfig {
 
     /**
      * 注册一个StatViewServlet
+     * 访问地址：http://localhost:8080/druid/login.html
      */
     @Bean
     public ServletRegistrationBean druidStatViewServlet() {
