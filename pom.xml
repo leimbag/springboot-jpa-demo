@@ -13,7 +13,7 @@
     <properties>
         <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
         <spring.data.version>Lovelace-SR10</spring.data.version>
-        <mysql.version>5.1.48</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <druid.version>1.1.20</druid.version>
         <guava.version>28.1-jre</guava.version>
         <commons.beanutils.version>1.9.4</commons.beanutils.version>
